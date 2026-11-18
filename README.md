@@ -1,7 +1,8 @@
 Code & Container Build (GitHub Codespaces):
 
     Write 3 tiny microservices (in Python, Node.js, or Go):
-    
+
+       
     order-service (Producer): Accepts an HTTP POST /order, saves it to PostgreSQL, and publishes an OrderPlaced event to Kafka.
     
     logistics-service (Consumer): Polls the Kafka orders topic, reads live rider locations from Redis, and assigns a rider.
@@ -13,6 +14,12 @@ Code & Container Build (GitHub Codespaces):
 Event Backbone & Databases (Aiven Cloud or In-Cluster):
 
     Spin up a free Aiven for Apache Kafka instance (create an orders topic with 3 partitions) and a free PostgreSQL + Redis instance.
+
+    Topics in Avion:
+    Kafka -->  mini-swiggy-kafka-prasanna-df9b.g.aivencloud.com:15280
+    PostgresDB --> postgres://avnadmin:<<Password>> @mini-swiggy-pg-prasanna-df9b.l.aivencloud.com:15278/defaultdb?sslmode=require
+    rediss --> rediss://default:<<Password>>@mini-swiggy-redis-prasanna-df9b.d.aivencloud.com:15279
+    
     
     Orchestration & Scaling (K3s / Kubernetes in Codespaces or Killercoda):
     
